@@ -1,38 +1,282 @@
-.App {
-  text-align: center;
+html, body {
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  height:100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Nunito', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Home Component */
+#main {
+ display:flex;
+ /* border: solid red 3px; */
+ height:30em;
+ padding:1em;
+ background-color: #9ba2ff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+#today-container {
+  background-color: #fff;
+  width:100%;
+  margin-bottom:1.85em;
+  border-radius: .3em;
+  padding:1em;
+}
+
+.today-top-div {
+  display:flex;
+  justify-content: space-between;
+  background-color:#fff;
+  color:#023047;
+  padding:1em;
+  border-bottom:solid;
+}
+
+#weekday-month-year {
+  letter-spacing:0.1em;
+  display:flex;
+  font-weight:700;
+  font-size:17px;
+
+}
+
+.date {
+  margin-left:1em;
+  
+}
+
+#plus {
+  color:#023047;
+  align-self:center;
+  margin-right: 1em;
+}
+
+/* New Item Component */
+.new-item-div {
+  background-color: #023047;
+  border-radius:0.3em;
+  color:#ffb703;
+  width:100%;
+  height:auto;
+  display:flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content:center;
+  margin:0.2em auto;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.exit {
+margin:0.5em;
+color:#9ba2ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new-item-inner-div {
+display: flex;
+flex-direction:column;
+padding:0em 1em;
+
+}
+
+.item-title-div {
+  display:flex;
+  justify-content: space-between;
+}
+
+.new-item-title-label {
+  margin-right:1em;
+  font-weight:700;
+  font-size:1.2rem;
+  color:#fff;
+}
+
+.new-item-title-div p {
+  margin-top:0.2em;
+}
+
+.exit-type-div {
+  display:flex;
+  justify-content: space-between;
+  border-bottom: solid 
+}
+
+.item-type {
+color:#9ba2ff;
+margin-right:4em;
+margin-top:0.2em;
+}
+
+.title {
+  margin-top:0;
+}
+
+.description-label {
+  margin-top:auto;
+  font-size:16px;
+  color:#fff;
+}
+
+.title-label {
+  color:#fff;
+}
+
+.new-item-description-label {
+margin-right:1em;
+margin-top:0.6em;
+font-weight:700;
+font-size:1.2rem;
+color:#fff;
+}
+
+.new-item-description-div {
+  display:flex;
+  justify-content: space-between;
+}
+
+.new-item-description-div p {
+  font-size:16px;
+}
+
+.new-item-title-div {
+  display:flex;
+  justify-content:space-between;
+  margin-right:auto;
+}
+
+
+
+/* Form Component */
+#form {
+  position:absolute;
+  top:6.3em;
+  left:6%;
+  right:6%;
+  background-color:#023047;
+  border-radius:0.3em;
+  padding:1em;
+  color:#ffb703;
+  display:flex;
+  flex-direction:column;
+  
+}
+
+.form-top {
+  display:flex;
+  justify-content: space-between;
+}
+
+.form-top h2 {
+  border-bottom:solid 2px #ffb703;
+  width:100%
+}
+
+.exit {
+
+}
+
+.item-type-label {
+  padding-bottom:2em;
+}
+
+.title-label {
+  margin-bottom:3em;
+}
+
+textarea {
+  margin-top:1em;
+  margin-bottom:1em;
+  padding-bottom:3em;
+  border-radius:0.3em;
+}
+
+form input, form select {
+  margin-left:1em;
+}
+
+.all-labels {
+font-weight:700;
+margin-right:0.25em;
+}
+
+#submit-btn {
+  padding: 1em 0;
+  margin-bottom:1em;
+  font-weight:700;
+  font-size:1.2rem;
+  color:#023047;
+  background-color:#ffb703;
+  border-radius:0.3em;
+}
+
+
+.form-title{
+font-weight:600;
+text-align:center;
+}
+
+
+/* Navbar Component */
+#header {
+  /* border:solid 5px #ccc; */
+  background-color: #023047;
+}
+
+#navbar {
+  /* border:solid 2.5px #c11; */
+  display:flex;
+  justify-content: space-between;
+  padding-top:1em;
+  padding-left:1em;
+  padding-bottom:0.4em;
+  height:3.5em;
+}
+
+#navlink-div {
+  /* border:solid 2px black; */
+  display:flex;
+  gap:0.45em;
+  margin-right:1em;
+  align-self:flex-end;
+  font-size:16px;
+}
+
+
+
+.site-title-link {
+  align-self:center;
+}
+
+.site-title {
+  display:flex;
+  font-weight:700;
+  color:#ffb703;
+  font-size:1.8rem;
+  padding-bottom:0.25em;
+
+
+}
+
+.reports-container {
+  margin: 0 auto;
+  display:flex;
+}
+
+.all-navlinks {
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing: 0.1em;
+}
+
+footer {
+  position:fixed;
+  bottom:0;
+  background-color:#023047;
+  color:#eae2b7;
+  line-height:.56;
+  width:100%;
+  padding-left:1em;
 }
