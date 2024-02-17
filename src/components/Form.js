@@ -9,9 +9,6 @@ export default function Form({ handleExitClick,
                                formData,
                                handleFormSubmit,
                                handleInputChange }) {
-
-
-
   return (
 <ErrorBoundary componentName="Form">
     <form id="form" onSubmit={handleFormSubmit}>
